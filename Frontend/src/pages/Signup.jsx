@@ -13,7 +13,7 @@ const Signup = () => {
     const handleSignup = async () => {
         try {
             setError('');
-            await axios.post('http://localhost:3000/api/auth/register', { username, email, password });
+            await axios.post('https://habit-tracker-3-xfc8.onrender.com/api/auth/register', { username, email, password });
             navigate('/login');
         } catch (err) {
             setError(err.response?.data?.message || 'Signup failed');
