@@ -12,7 +12,7 @@ const Login = () => {
     const handleLogin = async () => {
         try {
             setError('');
-            const res = await axios.post('http://localhost:3000/api/auth/login', { email, password });
+            const res = await axios.post('https://habit-tracker-3-xfc8.onrender.com/api/auth/login', { email, password });
             localStorage.setItem('token', res.data.token);
             navigate('/dashboard');
         }
