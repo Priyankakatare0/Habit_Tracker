@@ -16,7 +16,7 @@ const Dashboard = () => {
   const fetchHabits = async () => {
     try {
       setIsLoading(true);
-      const res = await axios.get('http://localhost:3000/api/habits', {
+      const res = await axios.get('https://habit-tracker-3-xfc8.onrender.com/api/habits', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
